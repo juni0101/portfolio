@@ -1,5 +1,4 @@
 //rest api로 데이터get가져오는법
-//하 깃허브왜 업로드안돼 아 진짜짜증난다..adf asdf asd fads fasdf
 import axios from "axios";
 
 export default function RestGetPage(){

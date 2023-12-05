@@ -20,13 +20,13 @@ const 그래프큐엘셋팅 = gql`
       }
 `
 
-//useMutation 훅을 이용하여 GraphQL mutation을 실행할 수 있는 함수 마이함수를 생성한다.
+//useMutation 훅을 이용하여 GraphQL mutation을 실행할 수 있는 함수 마이함수를 생성한다. 
 //또한, 각각 writer, title, contents 상태를 초기화한다.
-export default function GraphqlMutationPagePractice(){
-  const [마이함수] = useMutation(그래프큐엘셋팅)
-  const [writer, setWriter] = useState()
-  const [title, setTitle] = useState()
-  const [contents, setContents] = useState()
+export default function GraphqlMutationPagePractice(){ 
+  const [마이함수] = useMutation(그래프큐엘셋팅) 
+  const [writer, setWriter] = useState() 
+  const [title, setTitle] = useState() 
+  const [contents, setContents] = useState() 
 
 
   // 게시글 작성 버튼이 클릭되면, 마이함수를 실행하여 GraphQL mutation을 호출하고, 
