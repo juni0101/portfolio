@@ -10,9 +10,14 @@ export default function App({ Component, pageProps }) {
   })
 
   return (
+    <div>
+    <div>########여기는 app.js입니다#####</div>
     // 이 그래프큐엘셋팅 쓸수있도록 제공해줄게 라는뜻
     <ApolloProvider client={client}>
       <Component {...pageProps} />   {/* 위에코드가있어야 이게 그래프큐엘쓸수있음  */}
     </ApolloProvider>
+    <div>########여기는 app.js입니다#####</div>
+    </div>
+
   )
 }

@@ -15,8 +15,8 @@ const CREATE_PRODUCT = gql`
 `
 
 export default function GraphqlMutationPage(){
-  const [createProduct] = useMutation(CREATE_PRODUCT)
   const router = useRouter()
+  const [createProduct] = useMutation(CREATE_PRODUCT)
   const [seller, setSeller] = useState()
   const [name, setName] = useState()
   const [detail, setDetail] = useState()
@@ -34,7 +34,9 @@ export default function GraphqlMutationPage(){
           }
         }})
       console.log(result)
-      router.push(`/05/boards-mutation`)
+      //productId의 data를 못가져와서 계속 오류수정했었는데 원인은 createProduct에서 id데이터를 가져오지않아서였다.
+      const productId = result.data.createProduct._id;
+      router.push(`/05/boards-mutation?productId=${productId}`);
     }catch(error){
       alert(error.message)
     }

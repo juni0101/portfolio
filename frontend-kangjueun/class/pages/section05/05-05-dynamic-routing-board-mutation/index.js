@@ -41,7 +41,6 @@ export default function GraphqlMutationPage() {
     //이 에러는 백엔드에서 주는에러임 
     alert(error.message)
   }
-
   }
 
   return(
